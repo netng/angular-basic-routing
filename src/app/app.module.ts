@@ -8,13 +8,11 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './user/user.component';
+import { UsersComponent } from './users/users.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { AppRoutingModule } from './app-routing.module';
 
-const appRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about-us', component: AboutUsComponent },
-  { path: 'categories', component: CategoriesComponent },
-  { path: 'user/:id/:name', component: UserComponent }
-]
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,11 +20,14 @@ const appRoutes: Routes = [
     HomeComponent,
     AboutUsComponent,
     CategoriesComponent,
-    UserComponent
+    UserComponent,
+    UsersComponent,
+    NotFoundComponent,
+    EditUserComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

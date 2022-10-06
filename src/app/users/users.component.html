@@ -1,0 +1,15 @@
+<div>
+    <a
+        [routerLink]="['/users', 1, 'nandang']"
+        [queryParams]="{name: 'nandang', hi: 'halo nandang'}">
+        go to user nandang
+    </a>
+</div>
+<div>
+    <a 
+        [routerLink]="['/users', 2, 'kazu']"
+        [queryParams]="{name: 'kazu', hi: 'kazu'}">
+        go to user kazu
+    </a>
+</div>
+<router-outlet></router-outlet>
